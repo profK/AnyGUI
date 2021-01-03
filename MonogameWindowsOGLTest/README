@@ -1,0 +1,7 @@
+This folder contains the AnyGUI demo and test for Windows OpenGL.
+
+It is based on Monogame for Windows OpenGL which has a potential dependency on 
+the OpenAL library.  If you get an error that your system cannot find openal.dll then
+run the OpenAL installer "oalinst.exe" in the sub-directory named "Third Party".
+
+To run the demo, double click on MonogameWindowsOGLTest.exe

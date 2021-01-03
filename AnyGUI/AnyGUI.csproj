@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{270E0356-CE77-4366-A4B1-1E7CB9FC75AF}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AnyGUI</RootNamespace>
+    <AssemblyName>AnyGUI</AssemblyName>
+    <TargetFrameworkProfile>Profile158</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GuiComponentContainer.cs" />
+    <Compile Include="GuiLayout.cs" />
+    <Compile Include="GuiComponent.cs" />
+    <Compile Include="AbstractGuiComponent.cs" />
+    <Compile Include="AbstractGuiComponentContainer.cs" />
+    <Compile Include="Layouts\HorizontalLayout.cs" />
+    <Compile Include="Graphics\GraphicsProvider.cs" />
+    <Compile Include="Graphics\Image.cs" />
+    <Compile Include="Graphics\Drawspace.cs" />
+    <Compile Include="Graphics\Font.cs" />
+    <Compile Include="Components\Window.cs" />
+    <Compile Include="Components\Sprite.cs" />
+    <Compile Include="Graphics\AbstractDrawspace.cs" />
+    <Compile Include="Components\NineSprite.cs" />
+    <Compile Include="Components\RootPane.cs" />
+    <Compile Include="Components\Label.cs" />
+    <Compile Include="Components\PopupMenu.cs" />
+    <Compile Include="Components\DecoratedWindow.cs" />
+    <Compile Include="Components\Panel.cs" />
+    <Compile Include="Graphics\AsyncObject.cs" />
+    <Compile Include="Catalog\AssetImpl.cs" />
+    <Compile Include="Catalog\AssetStateImpl.cs" />
+    <Compile Include="Catalog\CatalogImpl.cs" />
+    <Compile Include="Graphics\LoadQueue.cs" />
+    <Compile Include="Components\Button.cs" />
+    <Compile Include="Layouts\NullLayout.cs" />
+    <Compile Include="Catalog\Catalog.cs" />
+    <Compile Include="Catalog\FontAsset.cs" />
+    <Compile Include="Catalog\AssetState.cs" />
+    <Compile Include="Catalog\Asset.cs" />
+    <Compile Include="Catalog\AssetAccessException.cs" />
+    <Compile Include="Catalog\FontAssetState.cs" />
+    <Compile Include="Catalog\FontAssetImpl.cs" />
+    <Compile Include="Catalog\FontAssetStateImpl.cs" />
+    <Compile Include="Components\ButtonBar.cs" />
+    <Compile Include="Layouts\VerticalLayout.cs" />
+    <Compile Include="Components\ScrollPanel.cs" />
+    <Compile Include="Components\ImagePanel.cs" />
+    <Compile Include="Layouts\GridLayoutManager.cs" />
+    <Compile Include="Components\MinimalComponentContainer.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\WWUtils\WWUtils\WWUtils.csproj">
+      <Project>{4E4153E0-166B-43DB-A077-EB053B37AB89}</Project>
+      <Name>WWUtils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Layouts\" />
+    <Folder Include="Graphics\" />
+    <Folder Include="Components\" />
+    <Folder Include="Catalog\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="JSIL.Meta">
+      <HintPath>..\..\WWUtils\WWUtils\bin\Debug\JSIL.Meta.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

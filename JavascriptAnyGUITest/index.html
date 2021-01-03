@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html> 
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body onload="onLoad()">    
+    <script type="text/javascript">
+      var jsilConfig = {
+        printStackTrace: false,
+        xna: 4,
+ 
+        manifests: [
+          "JavascriptAnyGUITest.exe"
+        ],
+      };
+     
+    </script>
+    <script src="../Libraries/JSIL.js" type="text/javascript"></script>
+     
+    <canvas id="AnyGUIDiv" width="1280" height="720">
+    </canvas><br>
+ 
+    <div id="log"></div>
+ 
+    <script type="text/javascript">
+      function runMain () {
+        // We can't invoke Main() since it disposes the Game immediately, breaking everything.
+        var asm = JSIL.GetAssembly("JavascriptAnyGUITest", true);
+        var game = new asm.JavascriptAnyGUITest.MainClass();
+        
+        game.Run();
+      };
+    </script>
+  </body>
+</html>
